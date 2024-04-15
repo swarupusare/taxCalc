@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="TaxCalc.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="taxCalculator">
+      <div class="cardTaxCalc">
+        <div class="card__Input">
+          <div class="lable">
+            <div>Enter Gross Annual Salary</div>
+            <div class="tooltip">
+              <span style="margin-left: 2px; font-size: 1.1em; color: Tomato">
+                <i class="fa-solid fa-circle-question"></i>
+              </span>
+              <span class="tooltiptext"
+                >Gross anual salary is your total salary in a year before any
+                deduction
+              </span>
+            </div>
+          </div>
+          <div class="inputField">
+            <input
+              type="text"
+              id="anualInput"
+              class=""
+              placeholder="Enter gross anual income"
+            />
+            <div class="tooltip1">
+              <div class="errorIcon" id="anualIcon">
+                <span style="font-size: 1.1em; color: Tomato">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                </span>
+              </div>
+              <div class="tooltiptext1">Please enter numbers only</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__Input">
+          <div class="lable">
+            Enter Extra Income
+            <div class="tooltip">
+              <span style="margin-left: 2px; font-size: 1.1em; color: Tomato">
+                <i class="fa-solid fa-circle-question"></i>
+              </span>
+              <span class="tooltiptext"
+                >Gross anual salary is your total salary in a year before any
+                deduction
+              </span>
+            </div>
+          </div>
+          <div class="inputField">
+            <input
+              type="text"
+              class=""
+              id="extraIncInput"
+              placeholder="Enter extra income from other sources"
+            />
+            <div class="tooltip1">
+              <div class="errorIcon" id="extraIncIcon">
+                <span style="font-size: 1.1em; color: Tomato">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                </span>
+              </div>
+              <div class="tooltiptext1">Please enter numbers only</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__Input">
+          <div class="lable">
+            Enter Age Group
+            <div class="tooltip">
+              <span style="margin-left: 2px; font-size: 1.1em; color: Tomato">
+                <i class="fa-solid fa-circle-question"></i>
+              </span>
+              <span class="tooltiptext"
+                >Gross anual salary is your total salary in a year before any
+                deduction
+              </span>
+            </div>
+            <div class="tooltip age" id="ageIcon">
+              <span style="margin-left: 2px; font-size: 1.1em; color: Tomato">
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </span>
+              <span class="tooltiptext"> input field is mandatory </span>
+            </div>
+          </div>
+
+          <div class="dropDown">
+            <select class="list" id="ageInput">
+              <option value="a">Choose</option>
+              <option value="60">Age >= 60</option>
+              <option value="40">Age >= 40 and Age < 60</option>
+              <option value="30">Age < 40</option>
+            </select>
+          </div>
+        </div>
+        <div class="card__Input">
+          <div class="lable">
+            Enter Total Applicable Deductions
+            <div class="tooltip" id="ageIcon">
+              <span style="margin-left: 2px; font-size: 1.1em; color: Tomato">
+                <i class="fa-solid fa-circle-question"></i>
+              </span>
+              <span class="tooltiptext"
+                >Gross anual salary is your total salary in a year before any
+                deduction
+              </span>
+            </div>
+          </div>
+
+          <div class="inputField">
+            <input
+              type="text"
+              class=""
+              id="deductionInput"
+              placeholder="Add total applicable deduction"
+            />
+            <div class="tooltip1">
+              <div class="errorIcon" id="deductionIcon">
+                <span style="font-size: 1.1em; color: Tomato">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                </span>
+              </div>
+              <div class="tooltiptext1">Please enter numbers only</div>
+            </div>
+          </div>
+        </div>
+        <div class="card__Btn">
+          <input type="button" id="calc" class="btn" value="Submit" />
+        </div>
+      </div>
+
+      <div class="card__Result" id="resultDialog">
+        <div class="card__Top">Your overall income will be</div>
+        <div class="card__Middle" id="result">12000</div>
+        <div class="card__Bottom">after tax deductions</div>
+        <div class="card__Result__Btn">
+          <input type="button" value="Close" class="btn" id="cls" />
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="TaxCalcj.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/84d6ffc204.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
